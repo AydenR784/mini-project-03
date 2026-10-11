@@ -1,14 +1,288 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony's Pizzaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 20px;
+      padding: 10px;
       background-color: black;
-      margin: 0;
+      color: white;
+      font-family: "Roboto", Arial, sans-serif;
+    }
+
+    a {
+      color: #ffb347;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      border: 2px solid #ffb347;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      text-align: left;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .hero-text h2 {
+      margin-bottom: 8px;
+      font-size: 48px;
+    }
+
+    .hero-text p {
+      font-size: 24px;
+    }
+
+    .menu-category {
+      font-size: 28px;
+    }
+
+    .contact-boxes {
+      display: flex;
+      gap: 20px;
+    }
+
+    .contact-box {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid white;
+    }
+
+    .review {
+      margin: 16px 0;
+      padding: 10px;
+    }
+
+    .review blockquote {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      .contact-boxes {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+<body id="top">
+  <header>
+    <h1>Tony's Pizzaria</h1>
+    <nav>
+      <a href="#menu">Menu</a> |
+      <a href="#about">About</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<body>
+  <main>
+    <section id="home">
+      <div class="hero">
+        <img src="https://www.savingdessert.com/wp-content/uploads/2018/03/Chicago-Style-Deep-Dish-Pizza-5.jpg" alt="Chicago-style deep-dish pizza">
+        <div class="hero-text">
+          <h2>Tony's Pizzaria</h2>
+          <p>Come try our signature deep-dish pizza!</p>
+        </div>
+      </div>
+      <p>Welcome to Tony's! Come in for a slice, a whole pie, and a good time.</p>
+      <a href="#menu">See our menu</a>
+    </section>
+
+    <hr>
+
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <h3 class="menu-category">Pizza</h3>
+
+      <!-- Put your image files in an images folder and change each src to its filename. -->
+      <h4>Tony's Deep Dish Cheese — $18.99</h4>
+      <ul>
+        <li>Mozzarella</li>
+        <li>Thick, buttery deep-dish crust</li>
+        <li>Chunky tomato sauce</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJyPfp8Sc0NJe24twTG-zbC7rzdL3u9Pk1dR97FivQ0SRzigKJNlZoO4PS&s=10" alt="Cheese deep-dish pizza with chunky tomato sauce" width="250">
+      <hr>
+
+      <h4>Deep Dish Pepperoni — $21.99</h4>
+      <ul>
+        <li>Pepperoni</li>
+        <li>Mozzarella</li>
+        <li>Thick deep-dish crust</li>
+        <li>Chunky tomato sauce</li>
+      </ul>
+      <img src="https://thecafesucrefarine.com/wp-content/uploads/Easy-Deep-Dish-Pepperoni-Pizza-15.jpg" alt="Pepperoni deep-dish pizza" width="250">
+      <hr>
+
+      <h4>Sausage &amp; Giardiniera — $22.99</h4>
+      <ul>
+        <li>Italian sausage</li>
+        <li>Chicago-style giardiniera peppers</li>
+        <li>Mozzarella and chunky tomato sauce</li>
+        <li>Thick deep-dish crust</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ23neMZYfo1upsW7kvcVINa1WpHyrF866eEFzmgevDUbE_bEYYkgzznK9Y&s=10" alt="Deep-dish pizza with sausage and giardiniera peppers" width="250">
+      <hr>
+
+      <h4>The Deep Dish Works — $24.99</h4>
+      <ul>
+        <li>Sausage, pepperoni, and bacon</li>
+        <li>Green peppers and onions</li>
+        <li>Mozzarella and chunky tomato sauce</li>
+        <li>Thick deep-dish crust</li>
+      </ul>
+      <img src="https://www.savingdessert.com/wp-content/uploads/2018/03/Chicago-Style-Deep-Dish-Pizza-5.jpg" alt="Loaded deep-dish pizza with meats and vegetables" width="250">
+      <hr>
+
+      <h4>Spinach &amp; Ricotta Deep Dish — $21.99</h4>
+      <ul>
+        <li>Spinach and ricotta</li>
+        <li>Mozzarella</li>
+        <li>Chunky tomato sauce</li>
+        <li>Thick deep-dish crust</li>
+      </ul>
+      <img src="https://pizzaotherbread.wordpress.com/wp-content/uploads/2015/03/dsc_11371.jpg?w=640" alt="Spinach and ricotta deep-dish pizza" width="250">
+      <hr>
+
+      <h4>BBQ Chicken Deep Dish — $22.99</h4>
+      <ul>
+        <li>Barbecue chicken and red onion</li>
+        <li>Mozzarella</li>
+        <li>Barbecue sauce</li>
+        <li>Thick deep-dish crust</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHOzhJxEvn4MLxQ8tiWwvBk5bWIW-lISSQlO45s26OuEbfu_qmnUgdgeI&s=10" alt="Barbecue chicken deep-dish pizza" width="250">
+      <hr>
+
+      <h3 class="menu-category">Sides</h3>
+
+      <h4>Garlic Bread — $6.99</h4>
+      <ul>
+        <li>Bread</li>
+        <li>Garlic butter</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRitzkiL0hPFXFyjDBhU62k8mDLF_gFOdUwZwzu6x4jHX-vDRFSX8gMQQg&s=10" alt="Garlic bread" width="250">
+      <hr>
+
+      <h4>Mozzarella Sticks — $8.99</h4>
+      <ul>
+        <li>Mozzarella</li>
+        <li>Bread crumbs</li>
+        <li>Marinara sauce</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWabOJI49XKDH8FykSSWa5r9XMC_qA5i1jIZ1lsf51ZNvbj7z_k1iYJBg&s=10" alt="Mozzarella sticks" width="250">
+      <hr>
+
+      <h4>House Salad — $7.99</h4>
+      <ul>
+        <li>Lettuce</li>
+        <li>Tomato and cucumber</li>
+        <li>House dressing</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ75BeRPAR_dwE0f7v9cJVQVgyPfdXWRVvLw8T7Nqm9Rfw7mi5fo22r6sxh&s=10" alt="House salad" width="250">
+      <hr>
+
+      <h3 class="menu-category">Drinks</h3>
+
+      <h4>Italian Soda — $3.99</h4>
+      <ul>
+        <li>Soda water</li>
+        <li>Your choice of flavor</li>
+      </ul>
+      <img src="https://feastandwest.com/wp-content/uploads/2023/04/italian-soda-image.jpg" alt="Italian soda" width="250">
+      <hr>
+
+      <h4>Lemonade — $2.99</h4>
+      <ul>
+        <li>Lemon</li>
+        <li>Water and sugar</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxPMPV-TKh6nC9Dw88h1p5R5spKjAiVP8fY5uTRc3rGw&s=10" alt="Lemonade" width="250">
+      <hr>
+
+      <h4>Soft Drink — $2.49</h4>
+      <ul>
+        <li>Your choice of soft drink</li>
+      </ul>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzuUpkDWA_qzktuwaLwIznV6jBgQpYZN3Xf-Uo8rZCAw&s=10" alt="Soft drink" width="250">
+    </section>
+
+    <hr>
+
+    <section id="about">
+      <h2>About Tony's</h2>
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/f9/e2/8a/pizzaria-hermon.jpg" alt="Inside Tony's Pizzaria" width="300">
+      <p>We believe good pizza brings people together. Stop by with family and friends or grab a pizza to take home.</p>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+      <h2>Location &amp; Contact</h2>
+      <div class="contact-boxes">
+        <div class="contact-box">
+          <h3>Contact</h3>
+          <p>Address: 300 NJ-35, Keyport, NJ 07735</p>
+          <p>Phone: (732) 555-0123</p>
+          <p>Email: info@tonyspizzaria.com</p>
+        </div>
+        <div class="contact-box">
+          <h3>Hours</h3>
+          <ul>
+            <li>Monday - Friday: 11:00 AM - 10:00 PM</li>
+            <li>Saturday: 12:00 PM - 11:00 PM</li>
+            <li>Sunday: 12:00 PM - 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <p>Sample reviews for the page design. Replace these with real customer feedback before publishing.</p>
+      <article class="review">
+        <h3>Customer review</h3>
+        <p>Review from: John Doe</p>
+        <blockquote><em>"The deep dish had a crispy crust with plenty of cheese and sauce. It was filling and great to share."</em></blockquote>
+        <p>Rating: [★★★★★] | Shared with permission</p>
+      </article>
+      <article class="review">
+        <h3>Customer review</h3>
+        <p>Review from: Jane Doe</p>
+        <blockquote><em>"I loved the sausage and giardiniera pizza. The portions were generous, and the leftovers were just as good the next day."</em></blockquote>
+        <p>Rating: [★★★★] | Shared with permission</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p>Tony's Pizzaria</p>
+    <a href="#top">Back to top</a>
+  </footer>
 </body>
 </html>
